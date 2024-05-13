@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: ./
+      target: dev
+    image: wundergraph:dev
+    volumes:
+       - .:/app
+       - /app/node_modules
+       - /app/.wundergraph/generated
+    ports:
+      - 9991:9991
